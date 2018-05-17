@@ -1,0 +1,321 @@
+/* ==========================================================================
+   Página de Busca, Categorias e Departamentos
+   ========================================================================== */
+
+body.dep-cat-bus {
+	.botao{
+		@include font-size(1.2)
+	    font-family: roboto;
+	    font-weight: 500;
+	    color: #7D7D7D;
+	    float: left;
+	    padding: 4px;
+	    margin-top: 20px;
+	    margin-bottom: 20px;
+	    width: 100%;
+	    cursor: pointer;
+	    line-height: 15px;
+	    text-decoration: none;
+    	text-transform: uppercase;
+    	
+    	 @include mq($screen-md) {
+    	 	display: none;
+    	 }
+
+	}
+	.banner-departament {
+		overflow: hidden;
+
+		.box-banner {
+			img {
+			    height: auto;
+			    margin-bottom: 10px;
+			    width: 100%;
+			}
+		}
+	}
+
+	.sidebar {
+
+		.menu-navegue {
+			display: none;
+		}
+
+			.search-multiple-navigator,
+			.search-single-navigator {
+				margin-top: 10px;
+
+			h3, h4, input {
+				display: none;
+			}
+
+			&:before {
+				@include font-size(1.8);
+				display: block;
+				color: #4d4d4d;
+				content: 'Filtros';
+				margin-bottom: 10px;
+				padding-bottom: 10px;
+				text-transform: uppercase;
+				border-bottom: 1px solid #dadada;
+			}
+
+			.bt-refinar {
+				display: none;
+			}
+
+			fieldset{
+				padding: 7px 0;
+				margin-bottom: 5px;
+				border-bottom: 1px solid #dadada;
+
+					div{
+						display: none;
+					}
+
+				h5 {
+					@include font-size(1.4);
+					color: #34508d;
+					font-weight: bold;
+					margin-bottom: 8px;
+					text-transform: uppercase;
+					cursor: pointer;
+						&:after{
+							content: "+";
+							font-size: 12px;
+							float: right;
+						    margin-right: 15px;
+						}
+				}
+
+				label {
+					@include font-size(1.2);
+					cursor: pointer;
+
+					&.sr_selected {
+						color: #08b6a6;
+					}
+				}
+
+				.ver-filtros {
+				    color: #000;
+				    font-weight: bolder;
+				    text-decoration: none;
+				}
+
+				&.filtro_tamanho {
+					label {
+						padding: 0 5px;
+						min-width: 30px;
+						line-height: 30px;
+						text-align: center;
+						display: inline-block;
+						margin: 5px 3px 3px 2px;
+						border: 1px solid #f5f5f5;
+						background: #f5f5f5 none repeat scroll 0 0;
+
+						&:hover {
+							color: #fff;
+							background-color: #000;
+						}
+					}
+				}
+
+				&.filtro_faixa-de-preco {
+					label {
+						display: block;
+						position: relative;
+						padding-left: 9px;
+						margin-bottom: 10px;
+
+						&:before {
+							top: 0;
+							left: 0;
+							content: '>';
+							color: #34508d;
+							display: block;
+							font-weight: bold;
+							position: absolute;
+						}
+
+						&:hover {
+							text-decoration: underline;
+						}
+					}
+				}
+
+				&.filtro_tipo,
+				&.filtro_ocasiao {
+					label {
+						display: block;
+						margin-bottom: 7px;
+
+						&:hover {
+							text-decoration: underline;
+						}
+					}
+				}
+			}
+		
+			@include mq($screen-md) {
+				margin-top: 10px;
+
+				h3, h4, input {
+					display: none;
+				}
+
+				&:before {
+					@include font-size(1.8);
+					display: block;
+					color: #4d4d4d;
+					content: 'Filtros';
+					margin-bottom: 10px;
+					padding-bottom: 10px;
+					text-transform: uppercase;
+					border-bottom: 1px solid #dadada;
+				}
+
+				.bt-refinar {
+					display: none;
+				}
+
+				fieldset{
+					padding: 7px 0;
+					margin-bottom: 5px;
+					border-bottom: 1px solid #dadada;
+
+						div{
+							display: block;
+						}
+
+					h5 {
+						@include font-size(1.4);
+						color: #34508d;
+						font-weight: bold;
+						margin-bottom: 8px;
+						text-transform: uppercase;
+						cursor: pointer;
+							&:after{
+							content: "";
+						}
+					}
+
+					label {
+						@include font-size(1.2);
+						cursor: pointer;
+
+						&.sr_selected {
+							color: #08b6a6;
+						}
+					}
+
+					.ver-filtros {
+					    color: #000;
+					    font-weight: bolder;
+					    text-decoration: none;
+					}
+
+					&.filtro_tamanho {
+						label {
+							padding: 0 5px;
+							min-width: 30px;
+							line-height: 30px;
+							text-align: center;
+							display: inline-block;
+							margin: 5px 3px 3px 2px;
+							border: 1px solid #f5f5f5;
+							background: #f5f5f5 none repeat scroll 0 0;
+
+							&:hover {
+								color: #fff;
+								background-color: #000;
+							}
+						}
+					}
+
+					&.filtro_faixa-de-preco {
+						label {
+							display: block;
+							position: relative;
+							padding-left: 9px;
+							margin-bottom: 10px;
+
+							&:before {
+								top: 0;
+								left: 0;
+								content: '>';
+								color: #34508d;
+								display: block;
+								font-weight: bold;
+								position: absolute;
+							}
+
+							&:hover {
+								text-decoration: underline;
+							}
+						}
+					}
+
+					&.filtro_tipo,
+					&.filtro_ocasiao {
+						label {
+							display: block;
+							margin-bottom: 7px;
+
+							&:hover {
+								text-decoration: underline;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	#nav-dep {
+		padding: 20px;
+		overflow: hidden;
+		margin-bottom: 30px;
+		background-color: #f5f5f5;
+
+		.left {
+			float: left;
+			max-width: 60%;
+			line-height: 20px;
+		}
+
+		.right {
+			float: right;
+			max-width: 40%;
+		}
+	}
+
+	.mainShelf {
+		.sub,
+		.pager,
+		.searchResultsTime {
+			display: none;
+		}
+	}
+}
+
+body.dia-das-maes {
+
+	.banner-departament {
+		overflow: hidden;
+		margin: 0px 0 20px;
+
+		img {
+			width: 100%;
+			height: auto;
+			max-width: 1200px;
+		}
+	}
+
+	.prateleira {
+		li {
+			width: 100%;
+			max-width: 370px;
+		}
+	}
+}

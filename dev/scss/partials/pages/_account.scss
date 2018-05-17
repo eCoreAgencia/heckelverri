@@ -1,0 +1,274 @@
+/* ==========================================================================
+   Minha Conta
+   ========================================================================== */
+
+.account {
+
+	main{
+		.container{
+			padding: 0 10px;
+		}
+	}
+
+  .profile-detail-display,
+  .address-display-block{
+    @extend .col-xs-12;
+    @include font-size(1.3);
+    border: 1px solid #9eb7ca;
+    padding: 20px 40px;
+    margin-top: 20px;
+
+    @include mq($screen-md) {
+      margin-top: 0;
+      width: 48%;
+      margin-right: 2%;
+      min-height: 370px;
+    }
+
+    h4 {
+		color: #333;
+		font-size: 18px;
+		font-weight: normal;
+		margin: 40px 0 20px;
+		text-transform: uppercase;
+    }
+
+    h5,
+    .profile-detail-display-email {
+      @include font-size(1.3);
+      margin-bottom: 0;
+      font-weight: normal;
+    }
+
+    .title,
+    .data{
+      @include font-size(1.3);
+      border: none;
+      font-weight: normal !important;
+    }
+
+    .new-address-link{
+      margin-top: 0;
+    }
+  }
+
+  .container{
+    .row {
+      width: 100%;
+      margin: 0;
+    }
+
+    h3{
+		color: #333;
+		font-size: 2rem;
+		font-weight: normal;
+		margin: 40px 0 20px;
+		text-transform: uppercase;
+    }
+  }
+
+  .profile-detail-display-info,
+  .address-display-unit-info { line-height: 1.5; }
+
+  .edit-address-link {
+    margin-top: 13px;
+    color: #000;
+
+    a {
+      @include font-size(0.9);
+
+      &.delete {
+        color: #939598;
+        font-weight: 400;
+        background: none;
+      }
+
+      @include mq($screen-sm) {
+        @include font-size(1.2);
+      }
+    }
+  }
+
+  [data-toggle="modal"] {
+    @include font-size(1.3);
+    color: #ac1118;
+    text-decoration: none;
+    line-height: 30px;
+  }
+
+  .data { font-weight: 300; }
+
+  .modal {
+    @include font-size(1.2);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    display: none;
+    background: rgba(#000, .6);
+
+    @include mq($screen-sm) {
+      @include font-size();
+    }
+
+    form {
+      position: absolute;
+      top: 5px;
+      left: 50%;
+      width: 100%;
+      max-width: 300px;
+      margin-left: -151px;
+    }
+
+    &-header {
+      flex-direction: row-reverse;
+      align-items: center;
+      height: 65px;
+      padding: 15px;
+      color: #fff;
+      background: #375a76;
+
+      h3 {
+        color: #fff;
+        flex: 1;
+        margin: 0;
+        font: {
+          size: 1.8em;
+          weight: 300;
+        }
+        text-transform: uppercase;
+        line-height: 0;
+      }
+
+      .close {
+        display: inline-block;
+        width: 28px;
+        height: 28px;
+        margin: 0;
+        padding: 0;
+        border: 0;
+        text-indent: -9999px;
+        background: {
+          color: transparent;
+          repeat: no-repeat;
+          position: center;
+        }
+        @include at2x('close-cross', 'png', 28px, 28px);
+      }
+    }
+
+    &-body {
+      padding: 15px;
+      border: {
+        right: 1px solid #375a76;
+        left: 1px solid #375a76;
+      }
+      overflow: auto;
+      -webkit-overflow-scrolling: touch;
+      background: #fff;
+
+      @include mq($screen-xs - 1, true) {
+        height: calc(100vh - 65px - 70px);
+      }
+
+      @include mq($screen-xs) {
+        height: 70vh;
+      }
+
+      .profile-detail-form-personal-data h5 { margin-top: 10px; }
+
+      h5 {
+        font: {
+          size: 1.4em;
+          weight: 400;
+        }
+        text-transform: uppercase;
+      }
+
+      .control-group {
+        margin-bottom: 1em;
+
+        label { display: inline-block; }
+
+        input {
+          &:not([type="radio"]) {
+            display: block;
+            width: 100%;
+            height: 30px;
+            padding: 0;
+            border: none;
+            border-bottom: 1px solid #999;
+            border-radius: 0;
+            transition-duration: .2s;
+            transition-timing-function: ease;
+            transition-property: padding, border-color;
+            appearance: none;
+
+            &:focus { border-color: #000; }
+
+            @include mq($screen-sm) {
+              height: 35px;
+            }
+          }
+        }
+      }
+
+      .form-personal-data-gender .controls label {
+        position: relative;
+        margin-top: .5em;
+        padding: {
+          right: 20px;
+          left: 18px;
+        }
+      }
+
+      #business-toggle {
+        @extend .btn;
+        margin-top: 1em;
+        font-size: .8em;
+        background: #375a76;
+
+        @include mq($screen-xs - 1, true) {
+          font-size: 1em;
+        }
+      }
+    }
+
+    &-footer {
+      flex-direction: row-reverse;
+      height: 70px;
+      padding: 15px;
+      border: 0;
+      color: #fff;
+      background: #375a76;
+
+      .btn {
+        padding: {
+          top: 0;
+          bottom: 0;
+        }
+        border-radius: 0;
+        color: #375a76;
+        appearance: none;
+        background: #fff;
+        border: none;
+        cursor: pointer;
+      }
+
+      .btn-link {
+        display: inline-block;
+        margin: 0 15px;
+        padding: 0;
+        border: none;
+        border-radius: 0;
+        color: #fff;
+        text-transform: uppercase;
+        background: transparent;
+        appearance: none;
+        cursor: pointer;
+      }
+    }
+  }
+}

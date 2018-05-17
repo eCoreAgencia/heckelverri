@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:vtex="http://www.vtex.com.br/2009/vtex-common" xmlns:vtex.cmc="http://www.vtex.com.br/2009/vtex-commerce">
+    <head>
+        <title>Heckel Verri - Fale Conosco</title>
+        <vtex:metaTags/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+        <vtex:template id="HECKEL-V2-commonStyles" />
+    </head>
+    <body>
+
+	    <header>
+	        <vtex:template id="HECKEL-V2-header" />
+	    </header>
+
+		<main>
+	        <article class="content-central">
+	            <section class="form-area">
+		            <div class="container">
+		            	<h1>Entre em contato conosco:</h1>
+		                <article class="conteudo">
+		                    <form action="javascript:FaleConosco()" method="POST" class="form-faleconosco" data-module="faleconosco">
+		                        <fieldset class="nome">
+ 		                         	<input type="text" name="FaleConoscoClientNome" id="cl_nome" class="nome FaleConosco-client-nome"  placeholder="Nome" data-validation="required" data-msg-required="Preencha o seu nome" />
+		                        </fieldset>
+
+		                        <fieldset class="email">
+		                         	<input type="text" name="FaleConoscoClientEmail" id="cl_email" class="email" placeholder="E-mail" data-validation="required email" data-msg-required="Preencha o seu e-mail" data-msg-email="O e-mail que você inseriu está incorreto" />
+		                        </fieldset>
+		                        
+		                        <fieldset class="tel">
+		                         	<input type="tel" name="FaleConoscoClientTel" id="cl_tel" class="tel" placeholder="Telefone" data-validation="required tel" data-msg-required="Preencha o seu telefone" data-msg-email="O telefone que você inseriu está incorreto" />
+		                        </fieldset>
+
+		                        <fieldset class="pedido">
+		                            <input type="text" name="FaleConoscoClientPedido" id="cl_pedido" class="pedido" placeholder="Numero Pedido" data-validation="required npedido" data-msg-required="Preencha o seu pedido" data-msg-email="O pedido que você inseriu está incorreto" />
+		                        </fieldset>
+		                        <fieldset class="Assunto">
+		                            <select name="Assunto" id="cl_type"> 
+	                                <option value="duvida">Tenho uma duvida</option> 
+	                                <option value="sugestao">Tenho uma Sugestao</option> 
+	                                <option value="reclamacao">Tenho uma Reclamação</option> 
+		                            </select>
+		                            </fieldset>
+		                        <fieldset class="mensagem">
+		                         	<textarea name="FaleConoscoClientDescription" id="cl_description" class="description" placeholder="Mensagem" data-validation="required description" data-msg-required="Preencha a sua mensagem" data-msg-email="O  que você inseriu está incorreto"> </textarea>
+		                        </fieldset>
+		                        <button type="submit" class="FaleConosco-button-ok submit">Enviar</button>
+		                    </form>
+		                </article>
+		            </div>
+	            </section>
+	        </article>
+	    </main>
+
+	    <footer>
+	        <vtex:template id="HECKEL-V3-newfooter" />
+	    </footer>
+
+	    <vtex:template id="HECKEL-V2-commonScripts" />
+	    <script type="text/javascript" src="/arquivos/faleconosco.js"></script>
+
+    </body>
+</html>

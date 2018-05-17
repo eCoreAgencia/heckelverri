@@ -1,0 +1,105 @@
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+
+footer {
+	clear: both;
+	overflow: hidden;
+	position: relative;
+	padding-bottom: 40px;
+
+	.footer-top-container {
+		padding: 10px 0;
+		overflow: hidden;
+		background-color: #3b3b3b;
+
+		.social-media{
+			margin-top: 20px;
+			overflow: hidden;
+
+			li{
+				display: inline-block;
+				margin-right: 10px;
+			}
+		}
+
+		.item {
+			@include font-size(1);
+			color: #fff;
+			line-height: 18px;
+
+			h3 {
+				@include font-size(1.4);
+				margin-bottom: 15px;
+				text-transform: uppercase;
+				margin-top: 25px;
+
+				@include mq($screen-md) {
+					margin-top: 0;
+				}
+			}
+
+			a {
+				color: #fff;
+				font-weight: 500;
+				text-decoration: none;
+
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+
+			#seguranca {
+				margin-top: 20px;
+
+				li {
+					margin-right: 10px;
+					display: inline-block;
+				}
+			}
+
+			&.face_widget {
+			    margin-top: 20px;
+
+			    @include mq($screen-md) {
+					margin-top: 0;
+				}
+			}
+		}
+	}
+
+	.bottom-footer-items {
+		clear: both;
+		padding: 15px;
+		overflow: hidden;
+
+		.copy {
+			@include font-size(1);
+			line-height: 20px;
+			text-align: center;
+
+			@include mq($screen-md) {
+				text-align: left;
+			}
+		}
+
+		.dev {
+			margin-top: 13px;
+			text-align: center;
+
+			@include mq($screen-md) {
+				text-align: right;
+			}
+			
+			li {
+				margin-right: 20px;
+				vertical-align: top;
+				display: inline-block;
+
+				&:last-child {
+					margin-right: 0;
+				}
+			}
+		}
+	}
+}

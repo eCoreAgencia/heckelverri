@@ -1,0 +1,317 @@
+/* ==========================================================================
+   Meus Pedidos
+   ========================================================================== */
+.myorders, .vtex-bootstrap,{
+	@include mq($screen-md) {
+		@include font-size(1.5);
+		padding: 50px 0;	
+	}    
+    .container{
+        padding:0;
+        width:100% !important;
+        @include mq($screen-md) {
+            width: 930px;
+        }
+    }
+    li{list-style: none;}
+    h3{margin-bottom: 11px;}
+    p {
+        margin: 0 0 11px;
+    }
+    .ordergroup {
+        border:0;
+        padding-top: 0;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        text-transform: none;
+    }
+    .form-search .search-query {
+        @include font-size(1.8);
+        width: 100%;
+        height: 40px;
+        display: block;
+        font-weight: bold;
+        padding: 5px 15px;
+        line-height: 110%;
+        border-radius: 0px;
+        border: 1px solid #0f1b39;       
+    }
+    div {
+        display: block;
+    }
+    form {
+        display: block;
+        margin-top: 0em;
+    }
+    hr{
+        display: none;
+    }
+    .page-header{ 
+        .title{
+            @include font-size(2.4);            
+            color: #fff;
+            margin-top: 0;
+            font-weight: bold;
+            padding: 7px 15px;
+            margin-bottom: 10px;
+            background-color: #3b3b3b;
+            text-transform: uppercase;            
+        }
+        #locale-select{
+            display: none;
+        }
+        ul.nav-pills{
+            display: none !important;
+        }
+    }
+    .order-header {
+        position: relative;        
+        margin: 44px 0 22px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #0f1b39;
+    }
+    .lead {
+        @include font-size(1.8);        
+        font-weight: 300;
+        line-height: 1.4;
+        font-weight: bold;
+        margin-bottom: 22px;
+        @include mq($screen-sm) {
+            @include font-size(2.4);
+            margin: 0;
+            text-transform: uppercase;
+        }
+        .order-date {
+            color: #a7a7a7;
+        }
+    }
+    .repeat-order .btn {
+        @include font-size(1.55);       
+        color: #fff;        
+        text-align: left;
+        position: relative;
+        bottom:0 !important;
+        text-decoration: none;
+        display: inline-block;
+        background-color: #9c0300;
+        padding: 7px 40px 5px 10px;
+        background-repeat: no-repeat;
+        background-position: calc(100% - 10px) 7px;        
+        background-image: url(/arquivos/icon-recompra.png);
+    }
+    .top-row {
+        width: 100%;
+        display: block;
+        @include mq($screen-sm) {
+            display: flex;
+            flex-flow: row wrap;
+            width: calc(100% + 30px);
+        }
+    }
+    .section-info-title {
+        @include font-size(2.4);
+        margin-top: 0;
+        text-transform: uppercase;
+    }
+    .shipping-address {
+        @include mq($screen-sm) {
+            padding-right: 15px;
+        }
+        @include mq($screen-md) {
+            padding-right: 15px;
+        }
+        li {
+            line-height: 1.5;
+        }
+
+    }
+    .general-info {
+        flex: 1;
+        position: relative;
+        padding-bottom: 25px;
+        display: inline-block;        
+        .payment-value-monetary {
+            @include font-size(2.9);
+            color: #02a562;
+            font-weight: bold;
+        }
+    }
+    .bank-invoice-print{
+        padding-top: 25px;
+    }
+    .span9{
+        width:66.7%;
+    }
+    .order-status-info{
+        width: 33.3%;
+        display: block;
+        position: relative;
+        @include mq($screen-md) {width: 300px;}
+        .request-cancel{
+            float: left;
+            .request-cancel-link{
+                a {                    
+                    color: #fff;
+                    padding: 10px 20px;
+                    background: #c12134;
+                    display: inline-block;
+                    text-transform: uppercase;
+                }
+            }
+        }
+    }
+    table{
+        width: 100%;
+    }
+    .totals{
+        .table{                
+            width: 91%;
+            float: left;
+            text-align: left;
+        }
+        tbody {
+            border-color: inherit;
+            vertical-align: middle;            
+            display: table-row-group;            
+        }
+        .table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th {
+            padding: 8px;            
+            vertical-align: top;
+            line-height: 1.428571429;
+            border-top: 1px solid #c5c5c5;
+        }
+        .table>tbody>tr.info>td, .table>tbody>tr.info>th, .table>tbody>tr>td.info, .table>tbody>tr>th.info, .table>tfoot>tr.info>td, .table>tfoot>tr.info>th, .table>tfoot>tr>td.info, .table>tfoot>tr>th.info, .table>thead>tr.info>td, .table>thead>tr.info>th, .table>thead>tr>td.info, .table>thead>tr>th.info {
+            background-color: #e0e0e0;
+        }
+    }
+    .showTrackingInfo{
+        margin-bottom: 10px;
+        .btn {
+            color: #fff;
+            cursor: pointer;
+            background: #999;
+            font-weight: bold;
+            padding: 5px 15px;
+            display: inline-block;
+            text-transform: uppercase;      
+        }
+    }
+    .pull-right{
+        white-space: nowrap;
+    }
+    .order-detail-items {
+        margin: 30px 0;
+    }
+    thead{       
+        text-align: left;
+        border-color: inherit;
+        vertical-align: middle;
+        text-transform: uppercase;
+        display: table-header-group;       
+        
+        tr>th {
+            padding: 8px;            
+            vertical-align: bottom;
+            line-height: 1.428571429;
+            border-bottom: 2px solid #ddd;
+        }
+    }
+    .product-item{
+        td{
+            padding: 8px 0 8px 8px;         
+            vertical-align: top;
+            line-height: 1.428571429;
+            border-top: 1px solid #ddd;
+            &.shipping-date, &.product-price, &.quantity-price{
+                width: auto;
+            }
+        }
+        .product-name{
+            a{
+                @include font-size(1.8);
+                color: #0f1b39;
+                font-weight: bold;
+                text-decoration: none;
+                text-transform: uppercase;
+            }
+            .brand{
+                @include font-size(1.4);
+                text-transform: initial;
+                .brand-name {
+                    margin-top: 0;
+                    font-weight: normal;
+                    text-transform: uppercase;
+                }
+            }
+        }
+    }
+    .hide, .payment-title, .order-status{display: none;}
+    .order-status-wrapper{
+        float: left;
+    }
+    .label-warning{
+        color: #fff;
+        float: left;
+        padding: 5px;
+        font-size: 75%;
+        line-height: 1;
+        font-weight: normal;
+        text-align: center;
+        border-radius: .25em;
+        display: inline-block;
+        vertical-align: baseline;
+        background-color: #f0ad4e;
+    }
+    address{
+        font-style: normal;
+        text-decoration: none;
+    }
+    @media (max-width: $screen-xs-max) {
+        
+        .general-info{
+            width: 100%;
+            padding-bottom: 40px;
+        }
+        .cart-items{
+            thead{display: none;}
+            .product-image{
+                a{vertical-align: middle;}
+            }
+        }
+        h2.order-title{
+            text-align: center !important;
+            .pull-right{
+                display: block;
+                float: none !important;                
+            }
+        }
+        .order-detail-items {
+            td{
+                display: inline-block;
+                border: none;
+                &:before {
+                    @include font-size(1.4);
+                    width: 100%;
+                    color: #000;
+                    padding: 5px;
+                    display: block;
+                    background: #ddd;
+                    margin-bottom: 5px;
+                    content: attr(data-head);
+                    text-transform: uppercase;                   
+                }
+            }
+            .product-image{
+                width: 20%;
+            }
+            .product-name{
+                width: 80%;
+            }
+            .product-price, .quantity, .quantity-price, .shipping-date {
+                width: 50%;
+                position: relative;
+                text-align: center;
+            }
+        }
+    }
+}

@@ -1,0 +1,86 @@
+/* ========================================================================
+	Menu Persistente
+   ========================================================================== */
+
+body.top-height-active {
+	header {
+		&.menu-persistente {
+			display: none;
+
+			.mini-cart {
+				padding-top: 10px;
+			}
+
+			@include mq($screen-md) {
+				display: block;
+			}
+
+			@extend .transition;
+			top: 0;
+			width: 100%;
+			z-index: 999;
+			display: block;
+			position: fixed;
+			background-color: #fff;
+
+			.top-box {
+				@extend .transition;
+				display: none;
+			}
+
+			.middle-box {
+				@extend .transition;
+				overflow: hidden;
+				padding: 20px 0 0;
+				height: 70px;
+
+				.logo {
+					margin-top: 0;
+
+					img {
+					    width: 160px;
+					    height: 29px;
+					}
+				}
+
+				.search-box {
+					margin-top: 0;
+				}
+			}
+
+			.mini-cart {
+				margin-top: 6px;
+			}
+
+			.bottom-box {
+				overflow: visible;
+
+				nav {
+					ul.menu-list {
+						padding-top: 0;
+					}
+
+					ul {
+						li {
+							a {
+								padding: 10px 0;
+							}
+
+							&.menu-item {
+								.sub-menu {
+									top: 40px;
+									z-index: 99999999999;
+								}
+							}
+						}
+					}
+				}
+
+				svg {
+					@extend .transition;
+					display: none;
+				}
+			}
+		}
+	}
+}

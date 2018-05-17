@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:vtex="http://www.vtex.com.br/2009/vtex-common" xmlns:vtex.cmc="http://www.vtex.com.br/2009/vtex-commerce">
+    <head>
+        <title><vtex.cmc:productPageTitle /></title>
+        <vtex:metaTags/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+        <vtex:template id="HECKEL-V2-commonStyles" />
+
+    </head>
+    <body>
+        <header>
+            <vtex:template id="HECKEL-V2-header" />
+        </header>
+
+        <main>
+            <div class="container">
+
+                <div class="row">
+                    <vtex.cmc:breadCrumb />
+                </div>
+
+                <div class="row">
+                    <section class="product-view">
+                        <section class="product-box col-xs-12 col-md-7">
+                            <vtex.cmc:ProductImage zoom="on" />
+                        </section><!-- product-box END -->
+                        <vtex:contentPlaceHolder id="Tabela-de-medidas" />
+                        <section class="buy-box col-xs-12 col-md-5">
+                            <vtex.cmc:productName />
+
+                            <div class="product-info">
+                                <vtex.cmc:ProductDescription/>
+                            </div>
+
+                            <div class="choose-skus">
+                                <vtex.cmc:stockKeepingUnitSelection />
+                            </div>
+
+                            <div class="price-info">
+                                <div class="selecao-sku">
+                                    <span>QNTD:</span>
+                                    <div class="quantidade">
+                                       <i class="less">-</i>
+                                       <input class="prodQtd" type="text" value="1" disabled="disabled" />
+                                       <i class="more">+</i>
+                                   </div>
+                                </div><!-- selecao-sku END -->
+
+                                <div class="unidade">
+                                    <vtex.cmc:skuPrice/>
+                                </div>
+                                <div class="tabela-de-medidas call_modal">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="25" height="25"><path d="M390.165 397.03l-68.447-236.129c-4.899-16.907-5.853-45.716-2.082-62.909l17.006-77.521a8.677 8.677 0 0 0-6.089-10.203L295.841.336a8.68 8.68 0 0 0-10.149 4.462l-23.636 47.271h-23.985L214.436 4.797a8.683 8.683 0 0 0-10.254-4.43l-33.115 9.932a8.677 8.677 0 0 0-5.958 10.286l18.151 77.672c4.009 17.157 3.679 46.083-.724 63.165l-60.77 235.858a8.677 8.677 0 0 0 8.404 10.843h.018l95.428-.203c4.555-.009 10.001-.016 15.771-.02v60.711c0 14.356-11.679 26.034-26.034 26.034a8.679 8.679 0 0 0 0 17.356c14.201 0 26.791-6.889 34.712-17.466 7.92 10.578 20.511 17.466 34.712 17.466a8.679 8.679 0 0 0 0-17.356c-14.355 0-26.034-11.678-26.034-26.034v-60.713c6.936.002 13.557.008 18.93.018l104.141.208h.017a8.677 8.677 0 0 0 8.334-11.094zm-112.458-6.471c-5.382-.01-12.017-.016-18.964-.018v-.033h-17.356v.036c-5.781.004-11.244.01-15.807.019l-84.206.18 57.971-224.991c5.15-19.987 5.51-51.368.817-71.445l-16.295-69.729 18.311-5.491 22.77 45.54a8.68 8.68 0 0 0 7.762 4.797h34.712a8.681 8.681 0 0 0 7.762-4.797l22.811-45.625 19.95 5.71-15.261 69.559c-4.431 20.206-3.393 51.595 2.365 71.46l65.225 225.012-92.567-.184z" fill="#34518d"/></svg>
+                                    <span>Tabela de Medidas</span>
+                                </div>
+                                <vtex.cmc:BuyButton />
+                            </div><!-- price-info END -->
+
+                            <section class="more-about">
+                                <div class="item">
+                                    <h3>Composição</h3>
+                                    <vtex.cmc:productDescriptionShort />
+                                </div>
+
+                                <section class="share-area">
+                                    <h3>Compartilhe</h3>
+                                    <script type='text/javascript' src='//dsms0mj1bbhn4.cloudfront.net/assets/pub/shareaholic.js' data-shr-siteid='c28da282276d4af92f3ef47572fd6994' data-cfasync='false' async='async'></script>
+                                    <div class='shareaholic-canvas' data-app='share_buttons' data-app-id='24337026'></div>
+                                </section><!-- share-area END -->
+                            </section>
+                        </section><!-- buy-box END -->
+                    </section><!-- product-view END -->
+                </div>
+
+                <section class="shelf shelfRelacionados">
+                    <h2>Veja também</h2>
+                    <vtex:contentPlaceHolder id="shelfRelacionados" />
+                </section><!-- shelfRelacionados END -->
+            </div>
+        </main>
+
+        <footer>
+            <vtex:template id="HECKEL-V2-newfooter" />
+        </footer>
+
+        <vtex:template id="HECKEL-V2-commonScripts" />
+    </body>
+</html>

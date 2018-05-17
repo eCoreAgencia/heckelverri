@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:vtex="http://www.vtex.com.br/2009/vtex-common" xmlns:vtex.cmc="http://www.vtex.com.br/2009/vtex-commerce">
+	<head>
+		<title>Heckel Verri</title>
+		<vtex:metaTags/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<vtex:template id="HECKEL-V2-commonStyles" />
+		<link rel="stylesheet" type="text/css" href="/arquivos/vtex-smartResearch.css" />
+	</head>
+	<body>
+
+        <header>
+            <vtex:template id="HECKEL-V2-header" />
+        </header>
+
+        <main>
+        	<div class="container">
+                <div class="row">
+                    <section class="sidebar col-xs-12 col-md-3">
+                    <a href="javascript: window.history.go(-1)" class="botao">voltar</a>
+		            	<vtex.cmc:searchNavigator />
+	          		</section>
+	          		<section class="mainShelf col-xs-12 col-md-9">
+	          			<div class="banner-departament"><vtex:contentPlaceHolder id="banner-departamento" /></div>
+	          			<div id="nav-dep">
+	          				<div class="left"><vtex.cmc:breadCrumb /></div>
+	          				<div class="right"></div>
+	          			</div><!-- nav-dep END -->
+			            <vtex.cmc:searchResult layout="9a5a32b8-22c0-4807-951e-4908df17178f" itemCount="9" columnCount="9" />
+			        </section>
+                </div>
+        	</div>
+        </main>
+
+        <footer>
+            <vtex:template id="HECKEL-V2-newfooter" />
+        </footer>
+
+		<vtex:template id="HECKEL-V2-commonScripts" />
+		<script type="text/javascript" src="/arquivos/dia-das-maes-2017.js"></script>
+		<script type="text/javascript" src="/arquivos/vtex-smartResearch.js"></script>
+		
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$('.orderBy').first().appendTo('#nav-dep .right');
+			});
+		</script>
+
+	</body>
+</html>

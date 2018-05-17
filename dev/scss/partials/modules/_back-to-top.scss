@@ -1,0 +1,17 @@
+.js-back-to-top {
+	@include font-size(3);
+	@extend .transition;
+	top: 50%;
+	opacity: 0;
+	right: 5px;
+	display: block;
+	position: fixed;
+	text-align: center;
+	padding: 20px 20px 10px;
+	cursor: pointer;
+
+	&.active {
+		@extend .transition;
+		opacity: 1;
+	}
+}

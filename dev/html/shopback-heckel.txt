@@ -1,0 +1,29 @@
+ DELEGAÇÃO NÃO DNS SHOPBACK
+
+Para que possamos enviar email em seu nome, precisamos autenticar nossa ferramenta para que
+ela seja “autorizada” a fazer esses envios com o domínio de você s. Sendo assim, precisamos fazer
+as seguintes delegações no DNS e isso ê feito geralmente acessando o painel onde o domínio esta
+registrado (Registro.br, Locaweb, Uol Host, GoDaddy e etc).
+No total såo 3 apontamentos conforme descrevemos abaixo:
+
+1- SPF	
+Vimos que vocês já tem um SPF delegado, portanto nesse momento ê importante atualizarmos ele
+conforme explico abaixo.
+IMPORTANTE: Só podemos ter um apontamento de SPF, entåo você deve substituir o seu atual por
+esse que passo abaixo, que na verdade ê o seu atual + a inclusåo do nosso.
+
+Atual: v=spf1 mx include: amazonses.com ~all	
+
+ALTERAR PARA: v=spf1 mx include: amazonses.com
+include	:spf.shopback.com.br -all	
+2 e 3 - Devemos tambêm delegar um CNAME e um DKIM conforme abaixo.
+
+Entrada 	Tipo 	Priority 	Points
+shopback 	CNAME 		app.shopback.com.br
+sb1._domainkey 	TXT 		k=rsa; p=MIGfMA0GCSqGSIb3D
+QEBAQUAA4GNADCBiQKBgQDbm1vUEpmdRPJeR75mi9H7
+EcXoItIBLCCFNnbAYiggkYQkVOG/
+dBnczEtJx6P733qO2FBALIrYWFGEvEzmD
+mxjB5hrlPOAwNg8xWha2inIEFMS/vHNb0x
+qcTaLNY0wjf0wnUc67Ekx6z9d3ro6CO+lXQm
+QwWUSVwCqKBBZukyeIwIDAQAB 

@@ -1,0 +1,217 @@
+/* ==========================================================================
+   Shelf
+   ========================================================================== */
+
+body.home {
+	.prateleiras {
+		overflow: hidden;
+		margin-top: 20px;
+	}
+}
+
+
+
+.flag-discount {
+	top: 20px;
+    width: 89px;
+    overflow: hidden;
+    max-height: 34px;
+    position: absolute;
+
+	.flag.sale {
+	    color: #fff;
+	    padding: 10px;
+	    font-size: 14px;
+	    max-width: 55px;
+	    text-align: left;
+	    background-color: #91121d;
+	}
+}
+.ts-shelf-rate{
+text-align: center;
+}
+
+.trustvoxtit{
+	@include font-size(1.8);
+		color: #666;
+	    font-size: 1.8rem;
+	    text-align: center;
+	    text-transform: uppercase;
+	    font-weight: 400;
+
+		&:after,
+		&:before {
+			color: #b70000;
+		    content: "___________________________________________________";
+		    display: inline-block;
+		    margin: -8px 20px 0;
+		    overflow: hidden;
+		    text-indent: 0;
+		    vertical-align: top;
+		    width: 14%;
+		}
+
+}
+
+
+.shelf {
+	position: relative;
+
+	h2 {
+			@include font-size(1.6);
+			color: #666;
+		    margin: 50px auto;
+		    text-align: center;
+		    text-transform: uppercase;
+		    font-weight: 400;
+
+		@include mq($screen-md) {
+			@include font-size(1.8);
+			color: #666;
+		    margin: 50px auto;
+		    text-align: center;
+		    text-transform: uppercase;
+		    font-weight: 400;
+
+			&:after,
+			&:before {
+				color: #b70000;
+			    content: "___________________________________________________";
+			    display: inline-block;
+			    margin: -8px 20px 0;
+			    overflow: hidden;
+			    text-indent: 0;
+			    vertical-align: top;
+			    width: 14%;
+			}
+		}
+	}
+}
+
+body.dep-cat-bus {
+	.prateleira {
+		li {
+			max-width: 270px;
+		}
+	}
+}
+
+.prateleira {
+	text-align: center;
+
+	.ts-shelf-container div, html body .ts-shelf-container p {
+	    max-height: 999999px;
+	    text-align: center;
+	}
+
+	h2{
+		display: none;
+	}
+
+	li {
+		position: relative;
+		text-align: center;
+		margin: 0 10px 30px;
+		vertical-align: top;
+		display: inline-block;
+
+		span.principal {
+			@extend .transition;
+		}
+
+		&:hover {
+			span.principal {
+				@extend .transition;
+				opacity: 0;
+			}
+			span.secundario {
+				@extend .transition;
+				opacity: 1;
+			}
+		}
+
+		span.secundario {
+			@extend .transition;
+			top: 0;
+			opacity: 0;
+			width: 100%;
+			position: absolute;
+		}
+
+		a {
+			color: #252525;
+			text-decoration: none;
+
+			h3 {
+				@include font-size(1.6);
+				margin: 24px 0;
+				font-weight: 300;
+				text-transform: uppercase;
+			}
+
+			em {
+				font-style: normal;
+			}
+
+			span {
+				color: #6a6a6a;
+				display: block;
+				font-weight: 300;
+				text-transform: uppercase;
+
+				&.oldPrice {
+					@include font-size(0.9);
+					text-decoration: line-through;
+				}
+
+				&.bestPrice {
+					@include font-size(1.4);
+					margin: 5px 0;
+					color: #34508d;
+				}
+
+				&.redPrice{
+					color: #91121D;
+					font-weight: 600;
+				}
+
+				em {
+					display: block;
+				}
+			}
+		}
+
+		.action-buttons{
+			a.btn {
+				clear: both;
+				margin-top: 20px;
+				display: inline-block;
+				padding: 5px 8px;
+				overflow: hidden;
+
+				svg{
+					display: inline-block;
+				}
+
+				span{
+					color: #fff;
+				    display: inline-block;
+				    padding-top: 10px;
+				    vertical-align: top;
+				}
+			}
+		}
+
+		&.acessorios{
+			&:hover {
+				span.principal {
+					opacity: 1;
+				}
+
+				span.secundario {
+					opacity: 0;
+				}
+			}
+		}
+	}
+}
