@@ -267,6 +267,13 @@ body.dep-cat-bus {
 							}
 						}
 					}
+
+					&.filtro_cores{
+						label{
+							display: block;
+							line-height: 19px;
+						}
+					}
 				}
 			}
 		}

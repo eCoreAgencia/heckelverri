@@ -168,6 +168,11 @@ body.product{
                                     color: #fff;
                                     background-color: #000;
                                 }
+
+                                &.sku-picked{
+                                    background-color: #000;
+                                    color: #fff;
+                                }
                             }
                         }
                     }
