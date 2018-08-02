@@ -173,6 +173,15 @@ body.product{
                                     background-color: #000;
                                     color: #fff;
                                 }
+
+                                &.combination_unavaliable {
+                                    opacity: 0.5;
+                                    &:hover {
+                                        background-color: #fff;
+                                        color: #000;
+                                        cursor: not-allowed;
+                                    }
+                                }
                             }
                         }
                     }
