@@ -235,7 +235,7 @@ body.top-height-active header.menu-persistente .bottom-box svg,
 .js-back-to-top,
 .js-back-to-top.active,
 .modal .close-modal:hover,
-button.newsletter-button-ok.submit,
+.modal fieldset .newsletter-button-ok,
 body.product main .product-view .buy-box .choose-skus li.skuList label,
 body.product main .product-view .buy-box .choose-skus li.skuList label:hover,
 body.product main .product-view .buy-box .price-info .buy-button,
@@ -1682,11 +1682,24 @@ body.modal-active .modal {
 .modal .close-modal {
 	color: #000;
 	padding: 15px;
-	border-radius: 24px;
+	border-radius: 34px;
 	cursor: pointer;
-	font-size: 36px;
-	z-index: 999;
+	font-size: 0;
+	z-index: 999999999999999999999;
 	background-color: #fff;
+	display: inline-block;
+	position: fixed;
+	left: 50%;
+	margin-left: 92px;
+	top: 80px;
+	width: 64px;
+	text-align: center;
+}
+
+.modal .close-modal::after {
+	content: "x";
+	display: inline-block;
+	font-size: 36px;
 }
 
 .modal .close-modal:hover {
@@ -1715,6 +1728,7 @@ body.modal-active .modal {
 
 .modal .modal-container .newsletter {
 	background-color: transparent !important;
+	margin-top: 260px;
 }
 
 .modal .form-newsletter {
@@ -1748,17 +1762,21 @@ body.modal-active .modal {
 .modal fieldset.error {
 	border: medium none;
 	line-height: 14px;
-	margin: 70px 0 0 0 !important;
+	margin: 70px auto 0 !important;
 	text-align: center;
 	width: 200px;
+	display: block;
+	overflow: hidden;
 }
 
 .modal fieldset.success {
-	border: medium none;
-	line-height: 14px;
+	border: none;
+	line-height: 7px;
 	text-align: center;
-	margin: 113px 338px 0;
+	margin: 163px auto 0;
 	width: 210px;
+	display: block;
+	overflow: hidden;
 }
 
 .modal fieldset.success label,
@@ -1781,23 +1799,28 @@ body.modal-active .modal {
 	text-align: center;
 }
 
+.modal fieldset input.newsletter-client-name {
+	display: none;
+}
+
 .modal fieldset input.newsletter-client-email {
-	margin: 10px 0;
+	margin: 10px auto;
+	display: block;
+}
+
+.modal fieldset .newsletter-button-ok {
+	width: 115px;
+	height: 40px;
+	background-color: #000;
+	color: #fff;
+	border: none;
+	cursor: pointer;
 }
 
 .modal fieldset.fechar {
 	position: absolute;
 	right: 10%;
 	top: 45px;
-}
-
-button.newsletter-button-ok.submit {
-	margin: 20px 0 0 200px;
-	width: 115px;
-	height: 40px;
-	background-color: #000;
-	color: #fff;
-	border: none;
 }
 
 /* ==========================================================================
