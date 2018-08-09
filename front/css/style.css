@@ -2010,6 +2010,16 @@ body.product main .product-view .buy-box .choose-skus li.skuList label.sku-picke
 	color: #fff;
 }
 
+body.product main .product-view .buy-box .choose-skus li.skuList label.combination_unavaliable {
+	opacity: 0.5;
+}
+
+body.product main .product-view .buy-box .choose-skus li.skuList label.combination_unavaliable:hover {
+	background-color: #fff;
+	color: #000;
+	cursor: not-allowed;
+}
+
 body.product main .product-view .buy-box .more-about {
 	overflow: hidden;
 	margin-top: 20px;
