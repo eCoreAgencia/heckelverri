@@ -1,3 +1,5 @@
+
+
 function masterDataNewsletter(){
     var jsonSaveDadosUser = {
         "name": $("#cl_firstName").val(),

@@ -235,7 +235,7 @@ body.top-height-active header.menu-persistente .bottom-box svg,
 .js-back-to-top,
 .js-back-to-top.active,
 .modal .close-modal:hover,
-.modal fieldset .newsletter-button-ok,
+.modal .newsletter-button-ok,
 body.product main .product-view .buy-box .choose-skus li.skuList label,
 body.product main .product-view .buy-box .choose-skus li.skuList label:hover,
 body.product main .product-view .buy-box .price-info .buy-button,
@@ -1677,6 +1677,7 @@ body.modal-active .modal {
 	display: none;
 	min-height: 4500px;
 	position: absolute;
+	z-index: 999;
 }
 
 .modal .close-modal {
@@ -1808,19 +1809,21 @@ body.modal-active .modal {
 	display: block;
 }
 
-.modal fieldset .newsletter-button-ok {
+.modal fieldset.fechar {
+	position: absolute;
+	right: 10%;
+	top: 45px;
+}
+
+.modal .newsletter-button-ok {
 	width: 115px;
 	height: 40px;
 	background-color: #000;
 	color: #fff;
 	border: none;
 	cursor: pointer;
-}
-
-.modal fieldset.fechar {
-	position: absolute;
-	right: 10%;
-	top: 45px;
+	display: block;
+	margin: 20px auto;
 }
 
 /* ==========================================================================

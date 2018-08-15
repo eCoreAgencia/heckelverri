@@ -20,6 +20,7 @@ body{
   display: none;
   min-height: 4500px;
   position: absolute;
+  z-index: 999;
 
   .close-modal {
     color: #000;
@@ -151,20 +152,24 @@ body{
       }
     }
 
-    .newsletter-button-ok{
-      @extend .transition;
-      width: 115px;
-      height: 40px;
-      background-color: #000;
-      color: #fff;
-      border: none;
-      cursor: pointer;
-    }
+    
 
     &.fechar{
     position: absolute;
     right: 10%;
     top: 45px;
     }
+  }
+
+  .newsletter-button-ok{
+    @extend .transition;
+    width: 115px;
+    height: 40px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    display: block;
+    margin: 20px auto;
   }
 }
