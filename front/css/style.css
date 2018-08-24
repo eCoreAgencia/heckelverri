@@ -1717,7 +1717,7 @@ body.modal-active .modal {
 }
 
 .modal .modal-container {
-	background: transparent url("../arquivos/news_vip.png") no-repeat scroll 0 0;
+	background: rgba(0, 0, 0, 0) url("../arquivos/news_vip.png") no-repeat scroll 0 0;
 	height: 504px;
 	left: 50%;
 	margin-left: -290px;
@@ -3266,6 +3266,14 @@ body.product main .product-view .buy-box .price-info .vtex-bootstrap .showTracki
 	text-decoration: none;
 }
 
+:root {
+	font-size: 10px;
+}
+
+.render-container * {
+	font-size: 16px;
+}
+
 /* ==========================================================================
    Erro 404
    ========================================================================== */
@@ -3486,8 +3494,7 @@ body.fale-conosco main .content-central .conteudo button:hover {
 .slider .col-xs-12,
 .slider .account .profile-detail-display,
 .account .slider .profile-detail-display,
-.slider
-  .account .address-display-block,
+.slider .account .address-display-block,
 .account .slider .address-display-block {
 	padding-right: 0;
 }
@@ -4077,8 +4084,7 @@ body.product main .shelfRelacionados {
 .slider .col-xs-12,
 .slider .account .profile-detail-display,
 .account .slider .profile-detail-display,
-.slider
-      .account .address-display-block,
+.slider .account .address-display-block,
 .account .slider .address-display-block {
 	padding-right: 7px;
 }
