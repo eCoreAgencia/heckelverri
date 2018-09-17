@@ -4974,6 +4974,15 @@ td.visible-lg {
 
 }
 
+@media (max-width: 768px) {
+
+body.home main .banners-top .slick-slide img {
+	margin-left: 0;
+	width: 100%;
+}
+
+}
+
 @media (max-width: 767px) {
 
 .visible-xs {
