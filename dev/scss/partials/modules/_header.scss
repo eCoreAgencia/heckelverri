@@ -2,16 +2,17 @@
    Header
    ========================================================================== */
 
-header{
+header {
 	@extend .transition;
+
 	.top-box {
 		height: 34px;
 		overflow: visible;
 		margin-bottom: 10px;
 		background-color: #a7a7a7;
 
-		.left-items{
-			li{
+		.left-items {
+			li {
 				margin-right: 12px;
 				padding-right: 12px;
 				display: inline-block;
@@ -31,7 +32,7 @@ header{
 					&:hover {
 						text-decoration: underline;
 					}
-				
+
 					svg {
 						margin-right: 6px;
 						display: inline-block;
@@ -50,7 +51,7 @@ header{
 			margin-top: 13px;
 			font-weight: 500;
 			text-align: center;
-		
+
 			a {
 				color: #fff;
 				text-decoration: none;
@@ -72,7 +73,7 @@ header{
 				&:hover {
 					text-decoration: underline;
 				}
-			
+
 				span {
 					@include font-size(1.1);
 					color: #fff;
@@ -83,42 +84,42 @@ header{
 				}
 			}
 
-			.portal-totalizers-ref{
+			.portal-totalizers-ref {
 				float: right;
 
-                .title{
-                    display: none;
-                }
+				.title {
+					display: none;
+				}
 
-                .cart-info{
-                    li{
-                        display: none;
-                        list-style: none;
+				.cart-info {
+					li {
+						display: none;
+						list-style: none;
 
-                        &.amount-items{
-                            display: block;
+						&.amount-items {
+							display: block;
 
-                            strong{
-                                display: none;
-                            }
+							strong {
+								display: none;
+							}
 
-                            em{
-                                @include font-size(11px);
-                                font-style: normal;
-                                color: #9c0300;
-							    line-height: 28px;
-							    margin-left: 6px;
-                            }
-                        }
+							em {
+								@include font-size(11px);
+								font-style: normal;
+								color: #9c0300;
+								line-height: 28px;
+								margin-left: 6px;
+							}
+						}
 
-                        &.amount-items{
-                            em:after{
-                                content: " itens";
-                            }
-                        }
-                    }
-                }
-            }
+						&.amount-items {
+							em:after {
+								content: " itens";
+							}
+						}
+					}
+				}
+			}
 		}
 	}
 
@@ -146,7 +147,7 @@ header{
 				text-indent: 0;
 			}
 
-			img{
+			img {
 				width: 45%;
 
 				@include mq($screen-sm) {
@@ -157,9 +158,9 @@ header{
 
 		.searchform {
 			border-top: 1px solid #e0e0e0;
-		    margin-top: 20px;
-		    padding-top: 5px;
-		    text-align: left;
+			margin-top: 20px;
+			padding-top: 5px;
+			text-align: left;
 
 			@include mq($screen-sm) {
 				border: none;
@@ -167,7 +168,7 @@ header{
 				margin-top: 0;
 				padding-top: 0;
 			}
-			
+
 			fieldset {
 				margin-right: 10px;
 				vertical-align: top;
@@ -226,11 +227,11 @@ header{
 				vertical-align: middle;
 
 				&:last-child {
-				.submenu{
-					left: -179px;
-				}				
-			}
-			
+					.submenu {
+						left: -179px;
+					}
+				}
+
 				.submenu {
 					@include font-size(1.1);
 					@extend .transition;
@@ -245,9 +246,9 @@ header{
 					text-transform: uppercase;
 					background-color: #fbfbfb;
 					min-height: 250px;
-					-webkit-box-shadow: 0px 0px 11px -2px rgba(191,191,191,0.75);
-					-moz-box-shadow: 0px 0px 11px -2px rgba(191,191,191,0.75);
-					box-shadow: 0px 0px 11px -2px rgba(191,191,191,0.75);
+					-webkit-box-shadow: 0px 0px 11px -2px rgba(191, 191, 191, 0.75);
+					-moz-box-shadow: 0px 0px 11px -2px rgba(191, 191, 191, 0.75);
+					box-shadow: 0px 0px 11px -2px rgba(191, 191, 191, 0.75);
 
 					h3 {
 						@include font-size(1.4);
@@ -321,6 +322,7 @@ header{
 						h2 {
 							@include font-size(0);
 							margin-top: -1px;
+
 							&:after {
 								@include font-size(1.4);
 								color: #666;
@@ -363,7 +365,7 @@ header{
 				}
 
 				&.has-sub {
-					&:hover {					
+					&:hover {
 						.submenu {
 							@extend .transition;
 							display: block;
@@ -371,7 +373,7 @@ header{
 					}
 				}
 
-				&.menu-red{
+				&.menu-red {
 					a.menu-anchor {
 						color: #f5352f;
 						font-weight: 600;
@@ -394,3 +396,21 @@ header{
 		}
 	}
 }
+
+// header .menu li.menu-item:nth-child(n + 8) .submenu {
+// 	font-size: 11px;
+// 	font-size: 1.1rem;
+// 	right: 0;
+// 	top: 24px;
+// 	z-index: 9;
+// 	width: 630px;
+// 	display: none;
+// 	padding: 20px;
+// 	text-align: left;
+// 	position: absolute;
+// 	text-transform: uppercase;
+// 	background-color: #fbfbfb;
+// 	min-height: 250px;
+// 	box-shadow: 0 0 11px -2px rgba(191, 191, 191, .75);
+// 	left: inherit;
+// }
