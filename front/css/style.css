@@ -3473,6 +3473,14 @@ body.fale-conosco main .content-central .conteudo button:hover {
 	transition-timing-function: ease;
 }
 
+article.quem-somos-article {
+	width: inherit;
+}
+
+.quem-somos-article p {
+	text-align: justify;
+}
+
 /* ==========================================================================
    Slick
    ========================================================================== */

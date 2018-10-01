@@ -110,7 +110,7 @@ body.duvidas{
 		}
 
 		p{
-			margin-bottom: 20px; 
+			margin-bottom: 20px;
 		}
 
 	}
@@ -122,9 +122,9 @@ body.quem-somos{
 		p{
 			margin-top: 30px;
 		}
-		
+
 		img{
-			float: right; 
+			float: right;
 		}
 	}
 }
@@ -223,16 +223,16 @@ body.fale-conosco{
 			    .description {
 			    	height: 90px;
 			    }
-				
+
 				 fieldset {
 				 	margin-bottom: 10px;
-				 }   
+				 }
 
 				 form {
 				 	width: 70%;
 				 	margin: 0 auto;
 				 	text-align: center;
-				 }       
+				 }
 
 				 button {
 					@include font-size(1.2);
@@ -249,16 +249,23 @@ body.fale-conosco{
 				    background-image:none;
 				    text-transform: uppercase;
                     background-color: #7D7D7D;
-					
+
 					&:hover{
 						@extend .transition;
 	                    overflow: visible;
 	                    transition-duration: .3s;
 						background-color: #696969;
                         transition-timing-function: ease;
-					}     
+					}
 				}
 			}
 		}
-	}
+    }
+}
+article.quem-somos-article{
+    width: inherit;
+}
+
+.quem-somos-article p {
+    text-align: justify;
 }
