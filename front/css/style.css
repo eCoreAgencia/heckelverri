@@ -3330,16 +3330,30 @@ body.institucional h2:before {
 	width: 14%;
 }
 
-body.institucional article h3 {
-	margin-top: 10px;
-	font-size: 14px;
-}
-
-body.institucional article p {
+body.institucional article .font--default {
 	line-height: 25px;
 	font-size: 14px;
-	font-weight: 300;
 	text-transform: none;
+	font-weight: 300;
+}
+
+body.institucional article .font--title {
+	margin-top: 10px;
+}
+
+body.institucional article .font--sub-title {
+	font-weight: 500;
+}
+
+body.institucional article .font--paragraph {
+	margin-bottom: 20px;
+}
+
+body.institucional article .font--link {
+	font-weight: 500;
+	color: #14aaf5;
+	cursor: pointer;
+	text-decoration: none;
 }
 
 body.institucional article span {

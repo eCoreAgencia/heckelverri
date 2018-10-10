@@ -59,17 +59,29 @@ body.institucional {
 	}
 
 	article {
-		h3{
-			margin-top: 10px;
-			font-size: 14px;
-		}
-
-		p {
-			line-height: 25px;
-			font-size: 14px;
-		    font-weight: 300;
-		    text-transform: none;
-		}
+        .font {
+            &--default{
+            line-height: 25px;
+            font-size: 14px;
+            text-transform: none;
+            font-weight: 300;
+            }
+            &--title{
+                margin-top: 10px;
+            }
+            &--sub-title {
+                font-weight: 500;
+            }
+            &--paragraph {
+                margin-bottom: 20px;
+            }
+            &--link{
+                font-weight: 500;
+                color: #14aaf5;
+                cursor: pointer;
+                text-decoration: none;
+            }
+        }
 
 		span{
 			display: block;
