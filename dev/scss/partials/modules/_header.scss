@@ -65,7 +65,10 @@ header {
         .right-items {
             margin-top: 5px;
             text-align: right;
+            display: flex;
             position: relative;
+            justify-content: flex-end;
+            padding-right: 28px;
 
             a {
                 text-decoration: none;
@@ -394,5 +397,13 @@ header {
                 }
             }
         }
+    }
+}
+@media(max-width: 600px){
+    .top-box .left-items li:nth-last-child(1){
+        display:none;
+    }
+    .top-box .left-items li{
+        margin: 0 !important;
     }
 }

@@ -652,7 +652,12 @@ header .top-box .center-items a:hover {
 header .top-box .right-items {
 	margin-top: 5px;
 	text-align: right;
+	display: -ms-flexbox;
+	display: flex;
 	position: relative;
+	-ms-flex-pack: end;
+	    justify-content: flex-end;
+	padding-right: 28px;
 }
 
 header .top-box .right-items a {
@@ -705,6 +710,10 @@ header .top-box .right-items .portal-totalizers-ref .cart-info li.amount-items e
 
 header .top-box .right-items .portal-totalizers-ref .cart-info li.amount-items em:after {
 	content: " itens";
+}
+
+header .top-box ul {
+	width: 131%;
 }
 
 header .middle-box {
@@ -924,11 +933,9 @@ header .menu li.menu-item .submenu .submenu-banner article.action-buttons h3 {
 	margin-top: 0;
 }
 
-header .menu li.menu-item:nth-child(5) .submenu,
-header .menu li.menu-item:nth-child(6) .submenu,
-header .menu li.menu-item:nth-child(7) .submenu {
-	left: auto;
-	right: -265px;
+header .menu li.menu-item:nth-child(n + 5) .submenu {
+	right: 0;
+	left: inherit !important;
 }
 
 header .menu li.menu-item.has-sub:hover .submenu {
@@ -5108,6 +5115,18 @@ td.visible-xs {
 	width: 50%;
 	position: relative;
 	text-align: center;
+}
+
+}
+
+@media (max-width: 600px) {
+
+.top-box .left-items li:nth-last-child(1) {
+	display: none;
+}
+
+.top-box .left-items li {
+	margin: 0 !important;
 }
 
 }
